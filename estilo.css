@@ -1,0 +1,381 @@
+/* header principal*/
+.contenedor-menu{
+    width: 100%;
+    height: 80px;
+    background: black;
+    padding: 0 20px;
+    margin: 100px auto;
+}
+.menu-opciones{
+    max-width: 940px;
+    margin: auto;
+    height: 100%;
+
+}
+nav{
+    height: 100%;
+
+}
+nav > ul { /*con esto indicamos se se vaya al que le sigue al nav, en este caso ul, para que solo aplique aqui la configuracion*/
+    height: 100%;
+    display: flex; /*con esto se pone en una renglon y no en lista */
+}
+nav ul  li {
+    height: 100%;
+    list-style: none; /*desde aqui le qutamos las caracteristicas a todas las*/
+    position: relative;
+    
+}
+nav> ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center; /*lo usamos para alinear las cosas al centro*/
+    padding: 10px;
+    text-transform: uppercase; /*para transformar las cosas a mayusculas*/
+    font-size: 16px;
+    transition: all 1s ease;
+    margin: auto 20px;
+    text-decoration: none
+}
+nav> ul > li > a:hover{
+    transform: scale(1.1);
+    background-color: rgb(138, 135, 135);
+    box-shadow: 0px 0px 10px 0px rgb(0, 0,0.5) ;
+} 
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden; /*con esto hacemos que el submenu desaparesca */
+    opacity: 0; 
+    position: absolute;
+    box-shadow: 0px 0px 10px 0px rgb(0, 0,0.5);
+    z-index: 10; /*con esto hacemos que se mantenga encima de todo */
+    
+}
+/*podemos ocultar y mostrar de la siguinte manera tambien 
+nav ul li ul {
+    position: absolute;
+    display: none; 
+}
+.menu-obras:hover ul{
+    display: block;
+}*/
+
+.menu-obras:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+   /* text-shadow: 0px 0px 20px rgb(0, 0,0);*/
+}
+/*nav ul:hover ul { esta era la forma anterior en la que estaba referido el texto
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}*/
+nav ul li ul li a {
+    display: block;
+    color: black;
+    padding: 6px; 
+    padding-left: 34px;/*controlamos el ancho del color de este elemento*/
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase; /*para que se transformen en mayusculas*/
+    transition: 2s;
+    text-decoration: none
+    
+}
+nav ul li ul li a:hover{
+    background-color: rgb(183, 180, 180);
+    transform: scale(1.1);
+    padding-left: 10px;
+    font-size: 16px;
+    /*box-shadow: 0px 0px 10px 0px rgb(0, 0,0.5);*/
+
+}
+ /*atributos universales*/
+ main{
+    width: 940px;
+    margin:0 auto;
+ }
+ /* N-contenedor-footer*/
+ .footer{
+    background: black;
+    margin-top: 150px;
+}
+ .N-contenedor-footer {
+    margin: 30px auto;
+    width: 940px;
+    height: 17em;
+    padding: 3em;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr ); /*con esto creamos las tres comlumnas y con 
+                        "repet (3, 1fr) creamos las tres columnas de una fraccion cada una "*/
+    gap: 20px;
+ }
+
+.N-footer-texto {
+    display: flex; /*para que me permita modificar los elementos */ 
+    flex-direction:column;  /*para colarlo en columnas */
+    justify-content: space-between; /*para crear espacio entre cada uno de los contenidos*/
+    padding: 2em;
+}
+.N-footer-texto:nth-child(2){
+    text-align: center;
+    font-size: 25px;
+
+}
+.icono-conactos{
+    width: 50px;
+}
+.instagram a{
+    text-decoration: none;
+    color: white;
+}
+
+/*paguina home*/
+.home{
+    background: black
+}
+.home-principal{
+    margin-right:74px;
+    
+}
+.contenedor{
+    text-align: center;
+}
+.img-home{
+    width: 90%;
+    margin-left: 80px;
+}
+.contenedor h2{
+    font-size: 8em;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    text-shadow: 0 0 25px rgb(249, 245, 245);
+    text-transform: uppercase;
+
+}
+
+.texto-home{
+    color: white;
+    font-size: 4em;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    text-shadow: 0 0 25px rgb(0, 0,20);
+    text-transform: uppercase;
+
+
+}
+.texto-home:last-child{
+    color: white;
+    font-size: 5em;
+    top: 130%;
+    left: 35%;
+    text-shadow: 0 0 25px rgb(0, 0,20);
+    text-transform: uppercase;
+    text-align: center;    
+}
+/*obra 0*/
+.acercade-principal {
+    width: 940px;
+}
+.acercade-imagen {
+    width: 40%;
+    float: right;
+    margin-left: 2em;
+
+}
+   
+.acercade-principal h2{
+    font-size: 4em;
+    margin: 1em auto ;
+}
+.acercade-principal:first-child{
+    
+    text-align: justify;
+    font-size: 25px;
+    
+}
+
+.acercade-texto:last-child{
+    clear: right;
+    text-align: right;
+    margin-top: 0px;
+}
+/*obra uno */
+.cuerpo-obra1 {
+    margin: 0;
+}
+.contenedor-obra1{
+    width: 940px;
+    margin: 0 auto;   
+}
+.contenedor-obra1 h1{
+    font-size: 4em;
+    margin-bottom: 100px;
+}
+.piezas-obra-1{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    margin-bottom: 60px;
+    transition: 3s all;
+}
+.piezas-obra-1:hover{
+    transform: scale(1.5);
+    background-color: rgb(245, 239, 239);
+    padding: 30px;
+}
+.registro-pieza1{
+    width: auto;
+}
+
+.registro-pieza1 img {
+    width: 100%;
+
+}
+.ficha-obra1 {
+    
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*obra dos*/
+.main-obra2{
+    background: gray;
+}
+.contenedor-obra2{
+    width: 940px;
+    margin: 0 auto;
+    
+}
+.contenedor-obra2 h2{
+    color: white;
+    font-size: 4em;
+    margin-bottom: 60px;
+}
+.divicion-obras p{
+    color: white;
+    size: 30px;
+    margin: 15px;
+    /*text-shadow: 0 0 50px rgb(0, 0,20);*/
+    text-shadow: 0 0 px 50px rgb(6, 6, 6);
+
+}
+
+.divicion-obras p:last-child{
+    font-weight: bold;  
+}
+
+.obras-verticales{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    transition: 3s all;    
+}
+.obras-verticales:hover{
+    transform: scale(1.2);
+    position: relative;
+}
+
+    
+.pieza-obras2{
+    position: relative;
+    
+}
+
+
+.pieza-obras2 img {
+    box-sizing: border-box;
+    width: 100%;
+}
+.ficha{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.obras-horizontales {
+   display: grid;
+   grid-template-rows: repeat 2(1fr);
+   gap: 20px;  
+   margin: 20px auto;
+   transition: 3s all;    
+}
+.obras-horizontales:hover{
+    transform: scale(1.2);
+    /*position: relative;*/
+}
+
+.hpieza-obras2{
+    position: relative;
+
+}
+.hpieza-obras2 img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    
+}
+
+.hficha{
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    
+}
+
+
+/*obra tres*/
+.body-obra3{
+    background: gray;
+}
+.obra-3 h2 {
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2em;
+    text-shadow: 0 0 px rgb(6, 6, 6);
+}
+.obra-3 p{
+    font-size: 2em;
+    color: white;
+    text-align: right;
+    text-shadow: 0 0 25px rgb(39, 38, 38);
+}
+
+.obra3-video{
+    /*position: absolute;
+    left: 10px;
+    top: 10px;
+}
+/*obra*/
+@media screen {
+    
+}
+
+    
+@media screen and (max-width:480px) {
+    .contenedor-menu
+    
+
+    .contenedor-menu{
+        width: auto;
+    }
+    .acercade-principal{
+        background: aquamarine;
+    }
+   
+}
